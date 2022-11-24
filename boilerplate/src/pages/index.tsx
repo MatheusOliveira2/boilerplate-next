@@ -1,7 +1,3 @@
-type Props = {
-  title: string;
-};
-
-export default function Home({ title }: Props) {
-  return <div>Home</div>;
+export default function Home() {
+  return <h2>Home2</h2>;
 }
