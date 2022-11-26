@@ -1,16 +1,14 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { ComponentMeta } from '@storybook/react';
+import { withKnobs, color } from '@storybook/addon-knobs';
 import Main from '.';
 
 export default {
   title: 'Main',
   component: Main,
-  args: {
-    background: 'red',
-  },
+  decorators: [withKnobs],
 } as ComponentMeta<typeof Main>;
 
-export const Basic = (args: { background: string }) => (
-  <Main background={args.background} />
+export const Basic = () => (
+  <Main background={color('backgroundColor', 'green')} />
 );
